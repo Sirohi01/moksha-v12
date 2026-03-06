@@ -180,7 +180,6 @@ export default function Footer() {
 
             <div className="flex items-center gap-5">
               {Object.entries(siteConfig.socialLinks).map(([platform, url], index) => {
-                const IconComponent = Icons[platform.charAt(0).toUpperCase() + platform.slice(1) as keyof typeof Icons] || Icons.Facebook;
                 return (
                   <a
                     key={platform}
@@ -190,7 +189,6 @@ export default function Footer() {
                     className="text-primary/30 hover:text-accent transition-all hover:-translate-y-1.5 w-5 h-5 outline-none"
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    <IconComponent />
                   </a>
                 );
               })}
